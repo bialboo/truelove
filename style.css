@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333; 
+}
+
+header {
+    background-color: #de6676;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    z-index: 1;
+    position: relative;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    display: flex; /* Define o contêiner principal como flexível */
+    max-width: 1200px; /* Largura máxima do contêiner */
+    margin: 0 auto; /* Centraliza o contêiner na página */
+    padding: 20px;
+    gap: 20px; /* Espaço entre os elementos */
+}
+
+.conteudo {
+    display: flex; /* Define o layout flexível para alinhar imagem e texto */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+    align-items: flex-start; /* Alinha o conteúdo ao topo */
+}
+
+section {
+    display: flex; /* Define o layout flexível */
+    flex: 3; /* Faz com que a seção principal ocupe mais espaço */
+    gap: 20px; /* Espaço entre a imagem e o texto */
+}
+
+.texto {
+    flex: 1; /* O texto ocupa o restante do espaço */
+}
+
+.imagem-esq {
+    flex: 1; /* Faz com que a imagem ocupe mais espaço */
+    width: 100%; /* Largura total dentro do flex container */
+    max-width: 400px; /* Largura máxima para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+aside {
+    flex: 1; /* Define o tamanho do aside */
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-self: flex-start; /* Alinha o aside no topo */
+    margin-left: auto; /* Empurra o aside para o canto direito */
+}
+
+aside h3 {
+    color: #ff6b6b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+
+    .conteudo {
+        flex-direction: column; /* Coloca a imagem em cima do texto em dispositivos móveis */
+        align-items: center; /* Centraliza o conteúdo em dispositivos móveis */
+    }
+
+    .imagem-esq {
+        max-width: 100%; /* Ajusta a imagem para ocupar toda a largura disponível */
+        margin-bottom: 15px; /* Adiciona espaçamento inferior */
+    }
+
+    .texto {
+        flex: 1; /* Ajusta o texto para ocupar a largura disponível */
+    }
+
+    aside {
+        margin-left: 0; /* Remove o espaçamento à esquerda em dispositivos móveis */
+        margin-top: 20px; /* Adiciona espaçamento superior em dispositivos móveis */
+    }
+}
+
+/* Personagens */
+.personagens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.personagem {
+    display: flex;
+    align-items: flex-start;
+    flex: 1 1 calc(50% - 20px); /* Dois elementos por linha, considerando o espaçamento */
+    box-sizing: border-box;
+    max-width: 400px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.personagem img {
+    width: 150px; /* Largura fixa para a imagem */
+    height: auto;
+    border-radius: 8px;
+    margin-right: 15px; /* Espaçamento entre a imagem e o texto */
+}
+
+.personagem div {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos verticalmente */
+}
+
+.personagem h3 {
+    margin: 0 0 5px 0; /* Remove a margem superior e adiciona uma margem inferior */
+    color: #ff6b6b;
+}
+
+.personagem h4 {
+    margin: 0 0 10px 0; /* Remove a margem superior e adiciona uma margem inferior */
+    color: #6c757d;
+}
+
+.personagem p {
+    margin: 0; /* Remove a margem para uma melhor formatação */
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Mobile first */
+@media (max-width: 768px) {
+    .personagem {
+        flex: 1 1 100%;
+        flex-direction: column; /* Coloca a imagem em cima do texto em dispositivos móveis */
+        align-items: center; /* Centraliza o conteúdo em dispositivos móveis */
+    }
+
+    .personagem img {
+        margin-right: 0; /* Remove o espaçamento da direita em dispositivos móveis */
+        margin-bottom: 15px; /* Adiciona espaçamento inferior em dispositivos móveis */
+        width: 100%; /* Faz a imagem ocupar toda a largura disponível */
+    }
+
+    .personagem div {
+        align-items: center; /* Centraliza o conteúdo em dispositivos móveis */
+    }
+
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+footer a {
+    color: #de6676;
+    text-decoration: none;
+}
